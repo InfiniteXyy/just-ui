@@ -1,0 +1,18 @@
+.tc-input {
+  border: 0;
+  border-bottom: 1px solid #ced2d9;
+  line-height: 22px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 8px 0;
+
+  &:focus {
+    border-bottom: 1px solid #287dfa;
+    outline: none;
+  }
+
+  &::placeholder {
+    color: #ced2d9;
+  }
+}

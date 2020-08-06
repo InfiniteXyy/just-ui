@@ -1,0 +1,39 @@
+@use "../styles/colors";
+
+.tc-button {
+  padding: 8px 16px;
+  line-height: 22px;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  border-radius: 2px;
+  border: none;
+
+  &--default {
+    background-color: white;
+    border: 1px solid colors.$secondary-dark;
+
+    &:hover {
+      background-color: colors.$secondary-dark;
+      color: white;
+    }
+  }
+
+  &--primary {
+    background-color: colors.$theme-color;
+    color: white;
+
+    &:hover {
+      background-color: colors.$theme-color-focus;
+    }
+  }
+
+  &--warning {
+    background-color: colors.$warning-color;
+    color: white;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}

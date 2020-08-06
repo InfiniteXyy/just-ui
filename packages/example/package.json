@@ -1,0 +1,19 @@
+{
+  "name": "tui-react-example",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "start": "parcel ./index.html"
+  },
+  "dependencies": {
+    "@infinitex/tui-react": "0.0.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
+    "typescript": "^3.9.7",
+    "parcel-bundler": "^1.12.4"
+  }
+}

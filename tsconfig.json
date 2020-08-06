@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "esnext",
+    "lib": [
+      "DOM",
+      "ESNext"
+    ],
+    "jsx": "react",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "strictNullChecks": true,
+    "experimentalDecorators": true
+  },
+  "exclude": [
+    "node_modules",
+    "packages/example"
+  ]
+}

@@ -1,0 +1,11 @@
+.tc-popover {
+  position: absolute;
+  display: none;
+  box-shadow: 0 4px 8px 0 rgba(69, 88, 115, 0.12);
+  background-color: white;
+  padding: 15px;
+
+  &--open {
+    display: block;
+  }
+}

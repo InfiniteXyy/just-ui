@@ -1,0 +1,40 @@
+{
+  "name": "tui-react-monorepo",
+  "version": "0.0.1",
+  "description": "A React UI component library",
+  "author": "Yiyang Xu",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "postinstall": "lerna bootstrap --no-ci --loglevel warn --concurrency 4",
+    "dev:app": "cd packages/example && npm run start",
+    "dev:lib": "cd packages/core && npm run start",
+    "test:lib": "cd packages/core && npm run ci:test",
+    "eslint": "eslint ./packages/core/**/*.tsx",
+    "storybook": "start-storybook -p 9999"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.11.0",
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-info": "^5.3.19",
+    "@storybook/addon-knobs": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/preset-typescript": "^3.0.0",
+    "@storybook/react": "^5.3.19",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.2.0",
+    "eslint": "^7.6.0",
+    "eslint-config-airbnb-typescript-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.20.5",
+    "lerna": "^3.22.1",
+    "prettier": "2.0.5",
+    "react-docgen-typescript-loader": "^3.7.2",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.2",
+    "style-loader": "^1.2.1",
+    "typescript": "^3.9.7"
+  }
+}

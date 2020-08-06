@@ -1,0 +1,18 @@
+name: Eslint
+
+on: [push]
+
+jobs:
+  build:
+    name: ESlint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: '12'
+      - name: Install Packages
+        run: npm install
+      - name: Eslint
+        run: npm run eslint
+
