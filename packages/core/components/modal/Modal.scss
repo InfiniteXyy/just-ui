@@ -1,5 +1,3 @@
-@use "../styles/animations";
-
 .tc-modal {
   &__content {
     position: absolute;
@@ -20,20 +18,14 @@
   }
 
   &__overlay {
-    animation-duration: 200ms;
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.6);
-
-    &--enter {
-      animation-name: fadeIn;
-    }
-
-    &--leave {
-      animation-name: fadeOut;
+    &--hidden {
+      display: none;
     }
   }
 }

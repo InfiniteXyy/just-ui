@@ -23,11 +23,12 @@
   },
   "peerDependencies": {
     "react": "^16.8.0",
-    "react-dom": "^16.8.0"
+    "react-transition-group": "^4.4.1"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^14.0.0",
     "@rollup/plugin-node-resolve": "^8.4.0",
+    "@types/react-transition-group": "^4.4.0",
     "@types/chai": "^4.2.12",
     "@types/classnames": "^2.2.10",
     "@types/enzyme": "^3.10.5",

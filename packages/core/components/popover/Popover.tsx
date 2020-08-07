@@ -1,6 +1,8 @@
 import React, { useCallback, useState } from 'react';
 import cls from 'classnames';
 import './Popover.scss';
+import { CSSTransition } from 'react-transition-group';
+import { Fade } from '../shared';
 
 interface IPopoverProps {
   component: JSX.Element;
@@ -34,15 +36,17 @@ export default (props: IPopoverProps): JSX.Element => {
         return null;
       })}
 
-      <div
-        className={cls(`tc-popover`, { 'tc-popover--open': isHover })}
-        style={{
-          left: targetPos.x + targetPos.width + 10,
-          top: targetPos.y,
-        }}
-      >
-        {component}
-      </div>
+      <Fade visible={isHover} unmountOnExit>
+        <div
+          className="tc-popover"
+          style={{
+            left: targetPos.x + targetPos.width + 10,
+            top: targetPos.y,
+          }}
+        >
+          {component}
+        </div>
+      </Fade>
     </>
   );
 };
