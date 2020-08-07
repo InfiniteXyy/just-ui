@@ -1,11 +1,11 @@
 import React from 'react';
 import { boolean, select, withKnobs } from '@storybook/addon-knobs';
-import Container from './Container';
-import { Button } from '..';
+import Box from './Box';
+import { Button } from '../index';
 
 export const Default = () => {
   return (
-    <Container
+    <Box
       style={{ height: 300, width: 500, border: '1px solid #cccccc', padding: 10 }}
       horizontal={boolean('horizontal', true)}
       center={boolean('center', false)}
@@ -14,12 +14,12 @@ export const Default = () => {
       <Button style={{ width: 60, height: 40 }} content={'1'} />
       <Button style={{ width: 60, height: 40 }} content={'2'} />
       <Button style={{ width: 60, height: 40 }} content={'3'} />
-    </Container>
+    </Box>
   );
 };
 
 export default {
-  component: Container,
-  title: 'Container',
+  component: Box,
+  title: 'Box',
   decorators: [withKnobs],
 };

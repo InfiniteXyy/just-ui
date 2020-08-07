@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import cls from 'classnames';
 import './Modal.scss';
-import { Fade, FadeScale } from '../shared';
+import { Fade, FadeScale } from '../../utils/index';
 
 interface IModalProps {
   isOpen: boolean;

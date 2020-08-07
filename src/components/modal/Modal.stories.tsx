@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 import Modal from './Modal';
-import { Button } from '..';
+import { Button } from '../index';
 import { action } from '@storybook/addon-actions';
 
 export const Default = () => {

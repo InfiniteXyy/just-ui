@@ -1,19 +1,17 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "esnext",
     "target": "esnext",
-    "lib": [
-      "DOM",
-      "ESNext"
-    ],
-    "jsx": "react",
     "esModuleInterop": true,
     "moduleResolution": "node",
-    "strictNullChecks": true,
-    "experimentalDecorators": true
+    "strict": true,
+    "jsx": "react",
+    "lib": ["DOM", "ES2020", "ES6"],
+    "baseUrl": ".",
+    "paths": {
+      "@utils": ["./src/utils"]
+    }
   },
-  "exclude": [
-    "node_modules",
-    "packages/example"
-  ]
+  "include": ["src"],
+  "exclude": ["**/*.test.tsx", "**/*.stories.tsx"]
 }

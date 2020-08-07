@@ -1,7 +1,7 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 import Popover from './Popover';
-import { Button } from '..';
+import { Button } from '../index';
 
 export const Default = () => {
   return (

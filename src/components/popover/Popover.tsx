@@ -1,8 +1,6 @@
 import React, { useCallback, useState } from 'react';
-import cls from 'classnames';
 import './Popover.scss';
-import { CSSTransition } from 'react-transition-group';
-import { Fade } from '../shared';
+import { Fade } from '../../utils/index';
 
 interface IPopoverProps {
   component: JSX.Element;

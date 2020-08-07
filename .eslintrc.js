@@ -1,6 +1,6 @@
 module.exports = {
   extends: ['eslint:recommended', 'plugin:react/recommended', 'airbnb-typescript-prettier'],
-  ignorePatterns: ['*.stories.tsx', '.eslintrc.js', '*.test.tsx'],
+  ignorePatterns: ['*.stories.tsx', '*rc.js', '*.test.tsx', '*.config.js'],
   rules: {
     'jsx-a11y/no-static-element-interactions': 0,
     'jsx-a11y/click-events-have-key-events': 0,
