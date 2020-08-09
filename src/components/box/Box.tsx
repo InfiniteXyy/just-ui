@@ -2,13 +2,13 @@ import React from 'react';
 import cls from 'classnames';
 import './Box.scss';
 
-interface IBoxProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+interface BoxProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   layout?: 'Stack' | 'StackEnd' | 'Focus' | 'Aside';
   horizontal?: boolean;
   center?: boolean;
 }
 
-export default (props: IBoxProps): JSX.Element => {
+export default (props: BoxProps): JSX.Element => {
   const { horizontal, center, layout = 'Stack', children, ...others } = props;
   return (
     <div

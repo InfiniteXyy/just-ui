@@ -1,13 +1,13 @@
 import React, { useCallback, useState } from 'react';
 import './Popover.scss';
-import { Fade } from '../../utils/index';
+import { Fade } from '../../utils';
 
-interface IPopoverProps {
+interface PopoverProps {
   component: JSX.Element;
   children: React.ReactChild;
 }
 
-export default (props: IPopoverProps): JSX.Element => {
+export default (props: PopoverProps): JSX.Element => {
   const { children, component } = props;
   const [isHover, setHover] = useState(false);
   const [targetPos, setTargetPos] = useState({ x: 0, y: 0, width: 0, height: 0 });
@@ -34,7 +34,7 @@ export default (props: IPopoverProps): JSX.Element => {
         return null;
       })}
 
-      <Fade visible={isHover} unmountOnExit>
+      <Fade visible={isHover}>
         <div
           className="tc-popover"
           style={{

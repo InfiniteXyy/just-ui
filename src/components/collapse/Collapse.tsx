@@ -2,14 +2,14 @@ import React from 'react';
 import cls from 'classnames';
 import './Collapse.scss';
 
-interface ICollapseProps {
+interface CollapseProps {
   isOpen: boolean;
   onClickLabel: () => void;
   label: JSX.Element;
   children: JSX.Element;
 }
 
-export default (props: ICollapseProps): JSX.Element => {
+export default (props: CollapseProps): JSX.Element => {
   const { isOpen, onClickLabel, label, children } = props;
   return (
     <>

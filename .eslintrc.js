@@ -8,5 +8,6 @@ module.exports = {
     'react/jsx-props-no-spreading': 0,
     'react/button-has-type': 0,
     '@typescript-eslint/no-empty-interface': 0,
+    'no-unused-expressions': 0
   },
 };

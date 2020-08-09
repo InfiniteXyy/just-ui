@@ -1,19 +1,16 @@
-import React, { useCallback, useState } from 'react';
-import cls from 'classnames';
+import React, { useCallback } from 'react';
 import './Modal.scss';
-import { Fade, FadeScale } from '../../utils/index';
+import { Fade, FadeScale } from '../../utils';
 
-interface IModalProps {
+interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   children: React.ReactNode;
   maskCloseable?: boolean;
 }
 
-export default (props: IModalProps): JSX.Element => {
+export default (props: ModalProps): JSX.Element => {
   const { isOpen, onClose, maskCloseable, children } = props;
-  const [isExiting, setExiting] = useState(false);
-
   const onClickMask = useCallback(() => {
     if (maskCloseable && isOpen) {
       onClose();
@@ -22,13 +19,11 @@ export default (props: IModalProps): JSX.Element => {
 
   return (
     <>
-      <Fade visible={isOpen} unmountOnExit>
+      <Fade visible={isOpen}>
         <div onClick={onClickMask} className="tc-modal__overlay" />
       </Fade>
-      <FadeScale visible={isOpen} onExit={() => setExiting(true)} onExited={() => setExiting(false)}>
-        <div className={cls('tc-modal__content', { 'tc-modal__content--hidden': !isOpen && !isExiting })}>
-          {children}
-        </div>
+      <FadeScale visible={isOpen}>
+        <div className="tc-modal__content">{children}</div>
       </FadeScale>
     </>
   );

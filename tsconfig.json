@@ -6,11 +6,7 @@
     "moduleResolution": "node",
     "strict": true,
     "jsx": "react",
-    "lib": ["DOM", "ES2020", "ES6"],
-    "baseUrl": ".",
-    "paths": {
-      "@utils": ["./src/utils"]
-    }
+    "lib": ["DOM", "ES2020", "ES6"]
   },
   "include": ["src"],
   "exclude": ["**/*.test.tsx", "**/*.stories.tsx"]
