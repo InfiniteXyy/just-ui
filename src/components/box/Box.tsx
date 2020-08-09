@@ -2,13 +2,15 @@ import React from 'react';
 import cls from 'classnames';
 import './Box.scss';
 
-interface BoxProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+interface BoxProps {
   layout?: 'Stack' | 'StackEnd' | 'Focus' | 'Aside';
   horizontal?: boolean;
   center?: boolean;
+  style?: React.CSSProperties;
+  children: React.ReactNode;
 }
 
-export default (props: BoxProps): JSX.Element => {
+export default function Box(props: BoxProps): JSX.Element {
   const { horizontal, center, layout = 'Stack', children, ...others } = props;
   return (
     <div
@@ -25,4 +27,4 @@ export default (props: BoxProps): JSX.Element => {
       {children}
     </div>
   );
-};
+}

@@ -1857,11 +1857,6 @@
   dependencies:
     "@types/react" "*"
 
-"@types/requestidlecallback@^0.3.1":
-  version "0.3.1"
-  resolved "https://registry.npm.taobao.org/@types/requestidlecallback/download/@types/requestidlecallback-0.3.1.tgz#34bb89753b1cdc72d0547522527b1cb0f02b5ec4"
-  integrity sha1-NLuJdTsc3HLQVHUiUnscsPArXsQ=
-
 "@types/resolve@1.17.1":
   version "1.17.1"
   resolved "https://registry.npmjs.org/@types/resolve/-/resolve-1.17.1.tgz#3afd6ad8967c77e4376c598a82ddd58f46ec45d6"

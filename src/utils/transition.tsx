@@ -32,7 +32,13 @@ export function Transition(props: TransitionProps): JSX.Element {
   const [animStatus, setAnimStatus] = useState<AnimStatus>('None');
 
   useEffect(() => {
-    animStatus === 'Begin' && window.requestIdleCallback(() => setAnimStatus('MoveIn'));
+    if (animStatus === 'Begin') {
+      if (typeof (window as any).requestIdleCallback === 'function') {
+        (window as any).requestIdleCallback(() => setAnimStatus('MoveIn'));
+      } else {
+        setTimeout(() => setAnimStatus('MoveIn'), 0);
+      }
+    }
   }, [animStatus]);
 
   useWatch((moveIn) => {
@@ -68,7 +74,7 @@ export function Fade(props: Omit<TransitionProps, 'cssPrefix'>): JSX.Element {
   );
 }
 
-export function FadeScale(props: Omit<TransitionProps, 'cssPrefix'>): JSX.Element {
+export function FadeSlide(props: Omit<TransitionProps, 'cssPrefix'>): JSX.Element {
   const { visible, children } = props;
   return (
     <Transition visible={visible} cssPrefix="tc-fade-slide">

@@ -8,11 +8,11 @@ interface ButtonProps
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-export default (props: ButtonProps): JSX.Element => {
+export default function Button(props: ButtonProps): JSX.Element {
   const { content, variant = 'default', ...others } = props;
   return (
     <button className={`tc-button tc-button--${variant}`} {...others}>
       {content}
     </button>
   );
-};
+}

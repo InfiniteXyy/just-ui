@@ -9,7 +9,7 @@ interface CollapseProps {
   children: JSX.Element;
 }
 
-export default (props: CollapseProps): JSX.Element => {
+export default function Collapse(props: CollapseProps): JSX.Element {
   const { isOpen, onClickLabel, label, children } = props;
   return (
     <>
@@ -19,4 +19,4 @@ export default (props: CollapseProps): JSX.Element => {
       <div className={cls('tc-collapse__content', { 'tc-collapse__content--open': isOpen })}>{children}</div>
     </>
   );
-};
+}

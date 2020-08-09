@@ -1,13 +1,17 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 import Popover from './Popover';
-import { Button } from '../index';
+import { Button, Box } from '../index';
 
 export const Default = () => {
   return (
-    <Popover component={<div>213</div>}>
-      <Button content="Click" />
-    </Popover>
+    <Box style={{ width: 500, height: 500 }} center layout="Focus">
+      {['Top', 'Right', 'Left', 'Bottom'].map((i: any) => (
+        <Popover display={i} key={i} component={<div>{i}</div>}>
+          <Button style={{ marginTop: 20 }} content={i} />
+        </Popover>
+      ))}
+    </Box>
   );
 };
 

@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 import './Modal.scss';
-import { Fade, FadeScale } from '../../utils';
+import { Fade, FadeSlide } from '../../utils';
 
 interface ModalProps {
   isOpen: boolean;
@@ -9,7 +9,7 @@ interface ModalProps {
   maskCloseable?: boolean;
 }
 
-export default (props: ModalProps): JSX.Element => {
+export default function Modal(props: ModalProps): JSX.Element {
   const { isOpen, onClose, maskCloseable, children } = props;
   const onClickMask = useCallback(() => {
     if (maskCloseable && isOpen) {
@@ -22,9 +22,9 @@ export default (props: ModalProps): JSX.Element => {
       <Fade visible={isOpen}>
         <div onClick={onClickMask} className="tc-modal__overlay" />
       </Fade>
-      <FadeScale visible={isOpen}>
+      <FadeSlide visible={isOpen}>
         <div className="tc-modal__content">{children}</div>
-      </FadeScale>
+      </FadeSlide>
     </>
   );
-};
+}
