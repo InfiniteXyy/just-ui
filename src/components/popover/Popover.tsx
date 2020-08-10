@@ -8,7 +8,7 @@ interface PopoverProps {
   display?: 'Left' | 'Right' | 'Top' | 'Bottom';
 }
 
-export default (props: PopoverProps): JSX.Element => {
+export default function Popover(props: PopoverProps): JSX.Element {
   const { children, component, display = 'Right' } = props;
   const [isHover, setHover] = useState(false);
   const [targetPos, setTargetPos] = useState<DOMRect | null>(null);
@@ -59,4 +59,4 @@ export default (props: PopoverProps): JSX.Element => {
       </Fade>
     </>
   );
-};
+}

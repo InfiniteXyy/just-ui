@@ -2,9 +2,12 @@ import React, { useEffect, useRef, useState } from 'react';
 import cls from 'classnames';
 import { useWatch } from './hooks';
 
-export interface TransitionProps {
+interface ContainerProps {
   visible: boolean;
-  children: React.ReactChild;
+  children: React.ReactNode;
+}
+
+export interface TransitionProps extends ContainerProps {
   cssPrefix: string;
 }
 
@@ -25,6 +28,11 @@ const mapStateToClass = (cssPrefix: string, status: AnimStatus): string => {
       return '';
   }
 };
+
+export function NoTransition(props: ContainerProps): JSX.Element {
+  const { children, visible } = props;
+  return <>{visible && children}</>;
+}
 
 export function Transition(props: TransitionProps): JSX.Element {
   const { visible, children, cssPrefix } = props;

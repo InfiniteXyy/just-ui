@@ -7,9 +7,9 @@ export const Default = () => {
   return (
     <Box
       style={{ height: 300, width: 500, border: '1px solid #cccccc', padding: 10 }}
-      horizontal={boolean('horizontal', true)}
-      center={boolean('center', false)}
-      layout={select('layout-type', ['Stack', 'StackEnd', 'Focus', 'Aside'], 'Stack')}
+      align={select('alignItems', ['Start', 'Center', 'End'], 'Start')}
+      justify={select('justifyContent', ['Start', 'Center', 'End', 'Between'], 'Start')}
+      direction={select('direction', ['Column', 'Row'], 'Column')}
     >
       <Button style={{ width: 60, height: 40 }} content={'1'} />
       <Button style={{ width: 60, height: 40 }} content={'2'} />

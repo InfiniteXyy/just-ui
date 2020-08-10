@@ -1821,6 +1821,13 @@
     "@types/react" "*"
     "@types/reactcss" "*"
 
+"@types/react-icons@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.npm.taobao.org/@types/react-icons/download/@types/react-icons-3.0.0.tgz#27ca2823a6add881d06a371bfff093afc1b9c829"
+  integrity sha1-J8ooI6at2IHQajcb//CTr8G5yCk=
+  dependencies:
+    react-icons "*"
+
 "@types/react-syntax-highlighter@11.0.4":
   version "11.0.4"
   resolved "https://registry.npmjs.org/@types/react-syntax-highlighter/-/react-syntax-highlighter-11.0.4.tgz#d86d17697db62f98046874f62fdb3e53a0bbc4cd"
@@ -4757,11 +4764,6 @@ es6-symbol@^3.1.1, es6-symbol@~3.1.3:
   dependencies:
     d "^1.0.1"
     ext "^1.1.2"
-
-esbuild@^0.6.14:
-  version "0.6.17"
-  resolved "https://registry.npmjs.org/esbuild/-/esbuild-0.6.17.tgz#64f428fe001600f7de9b4a28b0d0905c1078bc50"
-  integrity sha512-WgHSwOg2OHEHFOnmtuax+xZyX8iIU9Nk279DUzuuubdNXeBcaL4exWDgfnOXNRfZsycyQaJ+MgOo6JaqLXJUWg==
 
 escalade@^3.0.2:
   version "3.0.2"
@@ -9137,6 +9139,13 @@ react-hotkeys@2.0.0:
   integrity sha512-3n3OU8vLX/pfcJrR3xJ1zlww6KS1kEJt0Whxc4FiGV+MJrQ1mYSYI3qS/11d2MJDFm8IhOXMTFQirfu6AVOF6Q==
   dependencies:
     prop-types "^15.6.1"
+
+react-icons@*:
+  version "3.10.0"
+  resolved "https://registry.npm.taobao.org/react-icons/download/react-icons-3.10.0.tgz#6c217a2dde2e8fa8d293210023914b123f317297"
+  integrity sha1-bCF6Ld4uj6jSkyEAI5FLEj8xcpc=
+  dependencies:
+    camelcase "^5.0.0"
 
 react-input-autosize@^2.2.2:
   version "2.2.2"

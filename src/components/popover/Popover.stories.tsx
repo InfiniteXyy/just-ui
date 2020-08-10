@@ -5,7 +5,7 @@ import { Button, Box } from '../index';
 
 export const Default = () => {
   return (
-    <Box style={{ width: 500, height: 500 }} center layout="Focus">
+    <Box style={{ width: 500, height: 500 }} align="Center" justify="Center" direction="Column">
       {['Top', 'Right', 'Left', 'Bottom'].map((i: any) => (
         <Popover display={i} key={i} component={<div>{i}</div>}>
           <Button style={{ marginTop: 20 }} content={i} />
