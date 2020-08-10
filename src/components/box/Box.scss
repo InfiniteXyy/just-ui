@@ -1,0 +1,27 @@
+.tc-box {
+  display: flex;
+  flex-direction: column;
+
+  &--horizontal {
+    flex-direction: row;
+  }
+
+  &--center {
+    align-items: center;
+  }
+
+  &--aside {
+    justify-content: space-between;
+  }
+
+  &--focus {
+    justify-content: center;
+  }
+
+  &--stack {
+  }
+
+  &--stack-end {
+    justify-content: flex-end;
+  }
+}

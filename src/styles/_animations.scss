@@ -1,0 +1,39 @@
+.tc-fade-enter {
+  opacity: 0;
+
+  &--active {
+    opacity: 1;
+    transition: opacity 300ms;
+  }
+}
+
+.tc-fade-exit {
+  opacity: 1;
+
+  &--active {
+    opacity: 0;
+    transition: opacity 300ms;
+  }
+}
+
+.tc-fade-slide-enter {
+  opacity: 0;
+  transform: translateY(-30px);
+
+  &--active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms linear, transform 300ms ease;
+  }
+}
+
+.tc-fade-slide-exit {
+  opacity: 1;
+  transform: translateY(0);
+
+  &--active {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 300ms linear, transform 300ms ease;
+  }
+}

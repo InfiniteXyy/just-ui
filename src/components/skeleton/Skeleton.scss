@@ -1,0 +1,15 @@
+@keyframes tc-animation-skeleton {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+.tc-skeleton {
+  animation: 1.5s tc-animation-skeleton infinite ease-in-out;
+}
