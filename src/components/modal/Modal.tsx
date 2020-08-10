@@ -2,8 +2,7 @@ import React, { useCallback } from 'react';
 import './Modal.scss';
 import { MdClose } from 'react-icons/md';
 import { Fade, FadeSlide, NoTransition } from '../../utils';
-import { BoxProps } from '../box/Box';
-import { Box } from '../index';
+import Box, { BoxProps } from '../box/Box';
 
 interface ModalProps {
   isOpen: boolean;

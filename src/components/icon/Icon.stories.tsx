@@ -3,7 +3,7 @@ import { withKnobs } from '@storybook/addon-knobs';
 import Icon from './Icon';
 
 export const Default = () => {
-  return <Icon />;
+  return <Icon type="Close" />;
 };
 
 export default {
