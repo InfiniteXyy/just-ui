@@ -11,7 +11,7 @@
     "test": "mocha",
     "build": "rollup -c",
     "eslint": "eslint **/*.tsx",
-    "storybook": "start-storybook -p 9999",
+    "dev": "start-storybook -p 9999",
     "update:dependency": "taze -w"
   },
   "dependencies": {
@@ -23,6 +23,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.11.1",
+    "@commitlint/cli": "^9.1.1",
+    "@commitlint/config-conventional": "^9.1.1",
     "@rollup/plugin-babel": "^5.1.0",
     "@rollup/plugin-commonjs": "^14.0.0",
     "@rollup/plugin-node-resolve": "^8.4.0",
@@ -67,7 +69,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn test && yarn eslint"
+      "pre-commit": "yarn test && yarn eslint",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   }
 }
