@@ -5,5 +5,5 @@ interface InputProps extends React.DetailedHTMLProps<React.InputHTMLAttributes<H
 
 export default function Input(props: InputProps): JSX.Element {
   const { ...others } = props;
-  return <input className="tc-input" {...others} />;
+  return <input className="fc-input" {...others} />;
 }

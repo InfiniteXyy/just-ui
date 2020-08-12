@@ -53,7 +53,7 @@ export default function Popover(props: PopoverProps): JSX.Element {
       {React.cloneElement(children as React.ReactElement, { onMouseOver, onMouseOut })}
 
       <Fade visible={isHover}>
-        <div className="tc-popover" style={popoverPos}>
+        <div className="fc-popover" style={popoverPos}>
           {component}
         </div>
       </Fade>
