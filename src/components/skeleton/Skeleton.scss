@@ -1,4 +1,4 @@
-@keyframes tc-animation-skeleton {
+@keyframes fc-animation-skeleton {
   0% {
     opacity: 0.4;
   }
@@ -10,6 +10,6 @@
   }
 }
 
-.tc-skeleton {
-  animation: 1.5s tc-animation-skeleton infinite ease-in-out;
+.fc-skeleton {
+  animation: 1.5s fc-animation-skeleton infinite ease-in-out;
 }

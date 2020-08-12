@@ -8,7 +8,7 @@ interface PopoverProps {
   display?: 'Left' | 'Right' | 'Top' | 'Bottom';
 }
 
-export default (props: PopoverProps): JSX.Element => {
+export default function Popover(props: PopoverProps): JSX.Element {
   const { children, component, display = 'Right' } = props;
   const [isHover, setHover] = useState(false);
   const [targetPos, setTargetPos] = useState<DOMRect | null>(null);
@@ -53,10 +53,10 @@ export default (props: PopoverProps): JSX.Element => {
       {React.cloneElement(children as React.ReactElement, { onMouseOver, onMouseOut })}
 
       <Fade visible={isHover}>
-        <div className="tc-popover" style={popoverPos}>
+        <div className="fc-popover" style={popoverPos}>
           {component}
         </div>
       </Fade>
     </>
   );
-};
+}

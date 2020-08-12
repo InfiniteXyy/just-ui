@@ -11,7 +11,7 @@ interface ButtonProps
 export default function Button(props: ButtonProps): JSX.Element {
   const { content, variant = 'default', ...others } = props;
   return (
-    <button className={`tc-button tc-button--${variant}`} {...others}>
+    <button className={`fc-button fc-button--${variant}`} {...others}>
       {content}
     </button>
   );

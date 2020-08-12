@@ -8,7 +8,7 @@ interface CardProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDiv
 export default function Card(props: CardProps): JSX.Element {
   const { children, ...others } = props;
   return (
-    <div className="tc-card" {...others}>
+    <div className="fc-card" {...others}>
       {children}
     </div>
   );
