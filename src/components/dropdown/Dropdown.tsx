@@ -24,8 +24,8 @@ export default function Dropdown(props: DropdownProps): JSX.Element {
       <div
         onMouseEnter={() => setHoveredTrigger(true)}
         onMouseLeave={() => setHoveredTrigger(false)}
-        className={cls('fc-dropdown-trigger', {
-          'fc-dropdown-trigger--hover': menuOpen,
+        className={cls('jt-dropdown-trigger', {
+          'jt-dropdown-trigger--hover': menuOpen,
         })}
       >
         {typeof children === 'function' ? children(menuOpen) : children}
@@ -47,7 +47,7 @@ interface DropdownMenuItemProps extends React.DetailedHTMLProps<React.LiHTMLAttr
 function DropDownMenuItem(props: DropdownMenuItemProps): JSX.Element {
   const { children, className: _className, ...others } = props;
   return (
-    <li className={cls('fc-dropdown-menu__item', _className)} {...others}>
+    <li className={cls('jt-dropdown-menu__item', _className)} {...others}>
       {children}
     </li>
   );
@@ -60,7 +60,7 @@ interface DropdownMenuProps
 function DropDownMenu(props: DropdownMenuProps): JSX.Element {
   const { children, className: _className, ...others } = props;
   return (
-    <ul className={cls('fc-dropdown-menu', _className)} {...others}>
+    <ul className={cls('jt-dropdown-menu', _className)} {...others}>
       {children}
     </ul>
   );

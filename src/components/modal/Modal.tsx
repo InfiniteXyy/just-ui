@@ -25,12 +25,12 @@ function Modal(props: ModalProps): JSX.Element {
   return (
     <>
       <TransitionOverlay visible={isOpen}>
-        <div onClick={onClickMask} className="fc-modal__overlay" />
+        <div onClick={onClickMask} className="jt-modal__overlay" />
       </TransitionOverlay>
       <TransitionContent visible={isOpen}>
-        <div className="fc-modal__content">
+        <div className="jt-modal__content">
           {children}
-          <MdClose className="fc-modal__close-btn" onClick={onClose} />
+          <MdClose className="jt-modal__close-btn" onClick={onClose} />
         </div>
       </TransitionContent>
     </>
@@ -38,12 +38,12 @@ function Modal(props: ModalProps): JSX.Element {
 }
 
 Modal.Title = ({ children }: { children: string }): JSX.Element => {
-  return <h1 className="fc-modal__title">{children}</h1>;
+  return <h1 className="jt-modal__title">{children}</h1>;
 };
 
 Modal.Body = ({ children, ...others }: BoxProps): JSX.Element => {
   return (
-    <Box className="fc-modal__body" {...others}>
+    <Box className="jt-modal__body" {...others}>
       {children}
     </Box>
   );
@@ -51,7 +51,7 @@ Modal.Body = ({ children, ...others }: BoxProps): JSX.Element => {
 
 Modal.Footer = ({ children, ...others }: BoxProps): JSX.Element => {
   return (
-    <Box className="fc-modal__footer" {...others}>
+    <Box className="jt-modal__footer" {...others}>
       {children}
     </Box>
   );

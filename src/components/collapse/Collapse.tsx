@@ -13,10 +13,10 @@ export default function Collapse(props: CollapseProps): JSX.Element {
   const { isOpen, onClickLabel, label, children } = props;
   return (
     <>
-      <div onClick={onClickLabel} className={cls('fc-collapse__label', { 'fc-collapse__label--open': isOpen })}>
+      <div onClick={onClickLabel} className={cls('jt-collapse__label', { 'jt-collapse__label--open': isOpen })}>
         {label}
       </div>
-      <div className={cls('fc-collapse__content', { 'fc-collapse__content--open': isOpen })}>{children}</div>
+      <div className={cls('jt-collapse__content', { 'jt-collapse__content--open': isOpen })}>{children}</div>
     </>
   );
 }

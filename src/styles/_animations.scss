@@ -1,4 +1,4 @@
-.fc-fade-enter {
+.jt-fade-enter {
   opacity: 0;
 
   &--active {
@@ -7,7 +7,7 @@
   }
 }
 
-.fc-fade-exit {
+.jt-fade-exit {
   opacity: 1;
 
   &--active {
@@ -16,7 +16,7 @@
   }
 }
 
-.fc-fade-slide-enter {
+.jt-fade-slide-enter {
   opacity: 0;
   transform: translateY(-30px);
 
@@ -27,7 +27,7 @@
   }
 }
 
-.fc-fade-slide-exit {
+.jt-fade-slide-exit {
   opacity: 1;
   transform: translateY(0);
 

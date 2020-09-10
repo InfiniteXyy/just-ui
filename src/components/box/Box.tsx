@@ -16,13 +16,13 @@ export default function Box(props: BoxProps): JSX.Element {
   return (
     <div
       {...others}
-      className={cls('fc-box', className, {
-        'fc-box--justify-center': justify === 'Center',
-        'fc-box--justify-end': justify === 'End',
-        'fc-box--justify-between': justify === 'Between',
-        'fc-box--align-center': align === 'Center',
-        'fc-box--align-end': align === 'End',
-        'fc-box--direction-col': direction === 'Column',
+      className={cls('jt-box', className, {
+        'jt-box--justify-center': justify === 'Center',
+        'jt-box--justify-end': justify === 'End',
+        'jt-box--justify-between': justify === 'Between',
+        'jt-box--align-center': align === 'Center',
+        'jt-box--align-end': align === 'End',
+        'jt-box--direction-col': direction === 'Column',
       })}
     >
       {children}

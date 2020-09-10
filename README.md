@@ -1,1 +1,1 @@
-# [WIP] foody ui react component
+# [WIP] Just UI react component
