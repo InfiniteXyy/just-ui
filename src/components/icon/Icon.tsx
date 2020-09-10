@@ -1,11 +1,18 @@
 import React from 'react';
-import { MdClose } from 'react-icons/md';
+import { MdClose, MdArrowDropDown, MdArrowDropUp } from 'react-icons/md';
 
 interface IconProps {
-  // eslint-disable-next-line react/no-unused-prop-types
-  type: 'Close';
+  type: 'Close' | 'DropDown' | 'DropUp';
 }
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
+const IconMap: { [type in IconProps['type']]: React.ElementType } = {
+  Close: MdClose,
+  DropDown: MdArrowDropDown,
+  DropUp: MdArrowDropUp,
+};
+
 export default function Icon(props: IconProps): JSX.Element {
-  return <MdClose />;
+  const { type } = props;
+  const Element = IconMap[type];
+  return <Element />;
 }

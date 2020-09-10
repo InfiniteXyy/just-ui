@@ -19,6 +19,6 @@ export function useWatch<T>(onChange: (val: T) => (() => void) | void, target: T
 }
 
 export function useRefresh(): () => void {
-  const [, updateState] = useState();
+  const [, updateState] = useState({});
   return useCallback(() => updateState({}), []);
 }
