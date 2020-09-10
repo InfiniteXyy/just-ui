@@ -1,0 +1,31 @@
+.fc-dropdown {
+  &-trigger {
+    display: block;
+    width: 100px;
+    height: 40px;
+    border: 1px solid black;
+    transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+
+    &--hover {
+      background-color: black;
+      color: white;
+      cursor: pointer;
+    }
+  }
+  &-menu {
+    list-style-type: none;
+    width: 100px;
+    padding: 0;
+    margin: 0;
+    &__item {
+      margin: 0 auto;
+      background-color: #fafafa;
+      padding: 20px 0;
+      cursor: pointer;
+      &:hover {
+        background-color: #9b9b9b;
+        color: white;
+      }
+    }
+  }
+}

@@ -8,3 +8,4 @@ export { default as Box } from './box/Box';
 export { default as Card } from './card/Card';
 export { default as Skeleton } from './skeleton/Skeleton';
 export { default as Collapse } from './collapse/Collapse';
+export { default as Dropdown } from './dropdown/Dropdown';

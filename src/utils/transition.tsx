@@ -77,7 +77,7 @@ export function Fade(props: Omit<TransitionProps, 'cssPrefix'>): JSX.Element {
   const { visible, children } = props;
   return (
     <Transition visible={visible} cssPrefix="fc-fade">
-      {children}
+      <div>{children}</div>
     </Transition>
   );
 }
@@ -86,7 +86,7 @@ export function FadeSlide(props: Omit<TransitionProps, 'cssPrefix'>): JSX.Elemen
   const { visible, children } = props;
   return (
     <Transition visible={visible} cssPrefix="fc-fade-slide">
-      {children}
+      <div>{children}</div>
     </Transition>
   );
 }
